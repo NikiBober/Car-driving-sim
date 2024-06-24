@@ -12,6 +12,8 @@ TagManager:
   - Grass
   - Stone
   - Tiles
+  - Front
+  - Back
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UICharacter
   - 
   - Vehicle
   - Player
