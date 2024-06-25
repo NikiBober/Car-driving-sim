@@ -40,12 +40,27 @@ public class CarSelector : MonoBehaviour
 
     public void Previous()
     {
-        
+        _targetPosition = transform.position - Vector3.forward * _slotSize;
+        StartCoroutine(MoveToTarget());
+
+        if (_selectedIndex == _maxIndex)
+        {
+            _nextButton.SetActive(true);
+        }
+
+        _selectedIndex--;
+
+        if (_selectedIndex == _minIndex)
+        {
+            _previousButton.SetActive(false);
+        }
+
     }
 
     public void Select()
     {
-        
+        PlayerPrefs.SetInt("SelectedIndex", _selectedIndex);
+        Debug.Log(_selectedIndex);
     }
 
     private IEnumerator MoveToTarget()
