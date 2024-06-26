@@ -66,8 +66,11 @@ public class JUInputSystem : MonoBehaviour
 		PreviousWeaponButton = GameObject.Find("PreviousWeaponButton").GetComponent<ButtonVirtual>();
 		NextWeaponButton = GameObject.Find("NextWeaponButton").GetComponent<ButtonVirtual>();
 
-		//Driving Buttons
-		RightButton = GameObject.Find("RightButton").GetComponent<ButtonVirtual>();
+		//deactivate weapon buttons
+		PreviousWeaponButton.gameObject.transform.parent.gameObject.SetActive(false);
+
+        //Driving Buttons
+        RightButton = GameObject.Find("RightButton").GetComponent<ButtonVirtual>();
 		LeftButton = GameObject.Find("LeftButton").GetComponent<ButtonVirtual>();
 		ForwardButton = GameObject.Find("ForwardButton").GetComponent<ButtonVirtual>();
 		BackButton = GameObject.Find("BackButton").GetComponent<ButtonVirtual>();
