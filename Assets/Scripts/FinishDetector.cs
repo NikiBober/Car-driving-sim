@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class FinishDetector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _finishScreen;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter()
     {
-        
+        _finishScreen.SetActive(true);
     }
 }
